@@ -13,11 +13,11 @@ def get_secret(key, default=None):
         return os.getenv(key, default)
 
 # API Keys
-GROQ_API_KEY = get_secret('GROQ_API_KEY')
-OPENAI_API_KEY = get_secret('OPENAI_API_KEY')
+GROQ_API_KEY = str(get_secret('GROQ_API_KEY')).strip() if get_secret('GROQ_API_KEY') else None
+OPENAI_API_KEY = str(get_secret('OPENAI_API_KEY')).strip() if get_secret('OPENAI_API_KEY') else None
 
 # Model Selection (Switch between Groq and OpenAI)
-USE_GROQ = str(get_secret('USE_GROQ', 'true')).lower() == 'true'
+USE_GROQ = str(get_secret('USE_GROQ', 'true')).lower().strip() == 'true'
 
 # Model Configuration
 GROQ_MODEL = get_secret('GROQ_MODEL', 'llama-3.3-70b-versatile')

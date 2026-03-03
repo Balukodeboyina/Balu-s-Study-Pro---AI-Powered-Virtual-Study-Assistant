@@ -326,7 +326,7 @@ if page == "🏠 Home":
     - **📊 Performance** - Track progress with analytics
     - **⏰ Reminders** - Never miss a study session
     ---
-    **Tech:** GPT-4 + LangChain + FAISS + Streamlit
+    **Tech:** Groq (Llama 3.3) + LangChain + FAISS + Streamlit
     """)
 
 # ============================================================================
