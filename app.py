@@ -44,7 +44,7 @@ st.set_page_config(
 )
 
 
-# Custom CSS for a Clean & Professional "Balu's Edition"
+# Custom CSS for a Clean, Professional Light "Balu's Edition"
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Montserrat:wght@700&display=swap');
@@ -57,29 +57,34 @@ st.markdown("""
         font-family: 'Montserrat', sans-serif;
         font-size: 2.5rem;
         font-weight: 700;
-        color: #f8fafc;
+        color: #1e293b;
         text-align: center;
         padding: 2rem 0;
         letter-spacing: -0.5px;
     }
 
     .stApp {
-        background-color: #0f172a;
-        color: #f8fafc;
+        background-color: #f8fafc;
+        color: #1e293b;
     }
 
     .stSidebar {
-        background-color: #1e293b !important;
-        border-right: 1px solid #334155;
+        background-color: #ffffff !important;
+        border-right: 1px solid #e2e8f0;
     }
 
-    /* Professional Card Style */
-    .st-emotion-cache-1ky8h6r, .st-emotion-cache-ke7v6m {
-        background-color: #1e293b !important;
-        border: 1px solid #334155 !important;
+    .stSidebar [data-testid="stSidebarNav"] {
+        background-color: #ffffff !important;
+    }
+
+    /* Professional Card Style for Light Mode */
+    [data-testid="stVerticalBlock"] > [style*="flex-direction: column"] > [data-testid="stVerticalBlock"] {
+        background-color: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
         border-radius: 12px !important;
-        padding: 1.5rem !important;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+        padding: 2rem !important;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+        margin-bottom: 2rem !important;
     }
 
     .stButton>button {
@@ -88,33 +93,32 @@ st.markdown("""
         color: white;
         border: none;
         font-weight: 600;
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1.2rem;
         transition: all 0.2s ease;
         width: 100%;
     }
 
     .stButton>button:hover {
         background-color: #059669;
-        border-color: #059669;
         transform: translateY(-1px);
         box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.2);
     }
 
     .stTextInput>div>div>input, .stTextArea>div>div>textarea {
-        background-color: #0f172a !important;
-        border: 1px solid #334155 !important;
+        background-color: #ffffff !important;
+        border: 1px solid #e2e8f0 !important;
         border-radius: 8px !important;
-        color: #f8fafc !important;
+        color: #1e293b !important;
     }
 
     .footer-text {
         text-align: center;
         font-size: 0.85rem;
-        color: #94a3b8;
+        color: #64748b;
         padding: 2rem 0;
     }
     
-    /* Clean Tab Styling */
+    /* Clean Tab Styling (Light Mode) */
     .stTabs [data-baseweb="tab-list"] {
         gap: 24px;
         background-color: transparent;
@@ -122,16 +126,20 @@ st.markdown("""
 
     .stTabs [data-baseweb="tab"] {
         height: 50px;
-        white-space: pre;
         background-color: transparent;
-        border-radius: 4px 4px 0px 0px;
-        color: #94a3b8;
+        color: #64748b;
         font-weight: 600;
     }
 
     .stTabs [aria-selected="true"] {
         color: #10b981 !important;
         border-bottom-color: #10b981 !important;
+    }
+
+    /* Metric Styling */
+    [data-testid="stMetricValue"] {
+        color: #10b981 !important;
+        font-weight: 800 !important;
     }
 </style>
 """, unsafe_allow_html=True)
